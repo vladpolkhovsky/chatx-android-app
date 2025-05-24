@@ -43,7 +43,6 @@ android {
 
 dependencies {
     //Room
-
     implementation(libs.androidx.room.runtime)
 
     // If this project uses any Kotlin source, use Kotlin Symbol Processing (KSP)
