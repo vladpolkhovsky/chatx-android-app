@@ -13,5 +13,5 @@ You need an Android Sdk installed in your system.
   ```properties
   sdk.dir=D\:\\Android\\SDK
   ```
-- In file `[gradle.properties](gradle.properties)` update variable `app.domain` to actual server
+- In file [gradle.properties](gradle.properties) update variable `app.domain` to actual server
   base path
