@@ -17,6 +17,7 @@ pluginManagement {
         gradlePluginPortal()
     }
 }
+
 dependencyResolutionManagement {
     repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
     repositories {
@@ -26,6 +27,7 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "ChatX"
 include(":app")
- 
+
+rootProject.name = "ChatX"
+rootProject.name = "http://192.168.0.110:8080"

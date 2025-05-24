@@ -87,7 +87,7 @@ class AppDataContainer(private val context: Context) : AppContainer {
     }
 
     override val okHttpProvider: OkHttpProvider by lazy {
-        OkHttpProvider("http://192.168.0.110:8080")
+        OkHttpProvider(stringResource(R.string.app_domain))
     }
 
     override val offlineSessionRepository: SessionRepository by lazy {

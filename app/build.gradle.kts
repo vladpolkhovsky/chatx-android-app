@@ -99,3 +99,11 @@ dependencies {
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
 }
+
+processResources {
+    filesMatching("**/config.properties") {
+        expand(
+            "APP_DOMAIN": rootProject.domain
+        )
+    }
+}
