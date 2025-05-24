@@ -39,10 +39,10 @@ fun ChatXApp(
         snackbarHost = {
             SnackbarHost(hostState = snackbarHostState)
         }
-    ) { _ ->
+    ) { innerPadding ->
         ChatXNavHost(
             navController = navController,
-            modifier = modifier
+            modifier = modifier.padding(innerPadding)
         )
     }
 }

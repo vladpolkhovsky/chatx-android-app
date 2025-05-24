@@ -1,23 +1,13 @@
-# Ktor ChatX backend
+# ChatX android application
 
-## ENV
+## Build apk
 
-- `JWT_SECRET` - JWT secret key (default: `SECRET`)
-- `JWT_DOMAIN` - JWT domain (default: `https://jwt-provider-domain/`)
-- `USE_IN_MEMORY_DATABASE` - flag indicates that server uses h2 database (default: `true`)
-- `DB_URL` - external db jdbc url (null if `USE_IN_MEMORY_DATABASE`)
-- `DB_USER` - external db user (null if `USE_IN_MEMORY_DATABASE`)
-- `DB_PASSWORD` - external db pass (null if `USE_IN_MEMORY_DATABASE`)
-- `PORT` - app internal port (default: `8080`)
+You need an Android Sdk installed in your system.
 
-## Local startup
+### Prerequirements
 
-1. `./gradlew run` - starts server with default port (`8080`) and in memory database
-
-## Docker startup
-
-1. `docker build --tag 'chatx-ktor-backend' .`
-
-2. `docker run --name 'ChatX-Backend' -d -p '8090:8080' 'chatx-ktor-backend''`
-
-Container starts with port `8090`
+- Environment variable `ANDROID_HOME` set to SDK HOME (example: `D:/Android/SDK`)
+- Or file `local.properties` with variable
+  ```properties
+  sdk.dir=D\:\\Android\\SDK
+  ```
