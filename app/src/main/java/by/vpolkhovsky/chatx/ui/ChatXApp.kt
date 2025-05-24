@@ -43,7 +43,7 @@ fun ChatXApp(
     ) { innerPadding ->
         ChatXNavHost(
             navController = navController,
-            modifier = modifier.padding(innerPadding)
+            modifier = Modifier.padding(innerPadding)
         )
     }
 }

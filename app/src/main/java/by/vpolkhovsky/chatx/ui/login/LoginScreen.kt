@@ -136,13 +136,11 @@ fun LoginLayout(
                 val (passwordFocusRequester) = FocusRequester.createRefs()
 
                 Column(
-                    modifier = modifier,
                     horizontalAlignment = Alignment.CenterHorizontally,
                     verticalArrangement = Arrangement.Center
                 ) {
 
                     Column(
-                        modifier = modifier,
                         horizontalAlignment = Alignment.CenterHorizontally,
                         verticalArrangement = Arrangement.Center
                     ) {
@@ -162,12 +160,12 @@ fun LoginLayout(
                             keyboardActions = KeyboardActions(onNext = {
                                 passwordFocusRequester.requestFocus()
                             }),
-                            modifier = modifier.fillMaxWidth()
+                            modifier = Modifier.fillMaxWidth()
                         )
                         if (isUsernameValueIncorrect) {
                             Text(
                                 text = stringResource(R.string.login_login_hint),
-                                modifier = modifier
+                                modifier = Modifier
                                     .fillMaxWidth()
                                     .padding(top = 2.dp, bottom = 2.dp),
                                 fontFamily = MaterialTheme.typography.labelSmall.fontFamily,
@@ -181,7 +179,7 @@ fun LoginLayout(
                                         append(stringResource(R.string.login_login_example))
                                     }
                                 },
-                                modifier = modifier
+                                modifier = Modifier
                                     .fillMaxWidth()
                                     .padding(top = 2.dp, bottom = 2.dp),
                                 fontFamily = MaterialTheme.typography.labelSmall.fontFamily,
@@ -192,7 +190,6 @@ fun LoginLayout(
                     }
 
                     Column(
-                        modifier = modifier,
                         horizontalAlignment = Alignment.CenterHorizontally,
                         verticalArrangement = Arrangement.Center
                     ) {
@@ -223,13 +220,13 @@ fun LoginLayout(
                             keyboardActions = KeyboardActions(onNext = {
                                 this.defaultKeyboardAction(imeAction = ImeAction.Done)
                             }),
-                            modifier = modifier.fillMaxWidth()
+                            modifier = Modifier.fillMaxWidth()
                                 .focusRequester(passwordFocusRequester)
                         )
                         if (isPasswordValueIncorrect) {
                             Text(
                                 text = stringResource(R.string.login_password_hint),
-                                modifier = modifier
+                                modifier = Modifier
                                     .fillMaxWidth()
                                     .padding(top = 2.dp, bottom = 2.dp),
                                 fontFamily = MaterialTheme.typography.labelSmall.fontFamily,
@@ -243,7 +240,7 @@ fun LoginLayout(
                                         append(stringResource(R.string.login_password_example))
                                     }
                                 },
-                                modifier = modifier
+                                modifier = Modifier
                                     .fillMaxWidth()
                                     .padding(top = 2.dp, bottom = 2.dp),
                                 fontFamily = MaterialTheme.typography.labelSmall.fontFamily,
@@ -259,7 +256,7 @@ fun LoginLayout(
                         onLoginAction(usernameValue, passwordValue)
                     },
                     enabled = !(isUsernameValueIncorrect || isPasswordValueIncorrect),
-                    modifier = modifier.padding(6.dp),
+                    modifier = Modifier.padding(6.dp),
                     colors = ButtonDefaults.elevatedButtonColors(containerColor = MaterialTheme.colorScheme.secondaryContainer)
                 ) {
                     Text(stringResource(R.string.login_button_text))

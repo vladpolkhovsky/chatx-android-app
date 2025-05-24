@@ -17,20 +17,17 @@ fun ChatXNavHost(
 ) {
     NavHost(
         navController = navController,
-        startDestination = LoginDestination,
-        modifier = modifier
+        startDestination = LoginDestination
     ) {
         composable<LoginDestination> {
             LoginScreen(
                 onLoginToProfileId = { profileId ->
                     navController.navigate(ChatSelectionDestination(profileId))
-                },
-                modifier = modifier
+                }
             )
         }
         composable<ChatSelectionDestination> {
             ChatSelectorScreen(
-                modifier = modifier,
                 onBackToLogin = {
                     navController.popBackStack(LoginDestination, false)
                 },
@@ -44,7 +41,6 @@ fun ChatXNavHost(
         }
         composable<ChatDestination> {
             ChatScreen(
-                modifier = modifier,
                 onBack = {
                     navController.popBackStack()
                 }
