@@ -8,6 +8,12 @@ pluginManagement {
             }
         }
         mavenCentral()
+        mavenLocal {
+            content {
+                includeGroupByRegex("by\\.vpolkhovsy")
+                includeGroupByRegex("by\\.vpolkhovsy.*")
+            }
+        }
         gradlePluginPortal()
     }
 }
@@ -16,6 +22,7 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
+        mavenLocal()
     }
 }
 
