@@ -1,5 +1,7 @@
 # ChatX android application
 
+To build component, you need Java 17
+
 ## Build apk
 
 You need an Android Sdk installed in your system.
