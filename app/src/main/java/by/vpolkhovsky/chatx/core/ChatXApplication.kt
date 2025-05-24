@@ -4,11 +4,14 @@ import android.app.Application
 import android.content.Context
 import android.os.Build
 import androidx.annotation.RequiresApi
+import androidx.compose.ui.res.stringResource
 import androidx.lifecycle.ViewModelProvider.AndroidViewModelFactory
 import androidx.lifecycle.createSavedStateHandle
 import androidx.lifecycle.viewmodel.CreationExtras
 import androidx.lifecycle.viewmodel.initializer
 import androidx.lifecycle.viewmodel.viewModelFactory
+import by.vpolkhovsky.chatx.R
+import by.vpolkhovsky.chatx.activities.MainActivity
 import by.vpolkhovsky.chatx.data.ChatService
 import by.vpolkhovsky.chatx.data.UserProfileService
 import by.vpolkhovsky.chatx.data.http.OkHttpProvider
@@ -87,7 +90,7 @@ class AppDataContainer(private val context: Context) : AppContainer {
     }
 
     override val okHttpProvider: OkHttpProvider by lazy {
-        OkHttpProvider(stringResource(R.string.app_domain))
+        OkHttpProvider(MainActivity.instance.getString(R.string.app_domain))
     }
 
     override val offlineSessionRepository: SessionRepository by lazy {

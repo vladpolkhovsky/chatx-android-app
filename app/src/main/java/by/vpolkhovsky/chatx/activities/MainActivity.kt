@@ -17,9 +17,17 @@ import by.vpolkhovsky.chatx.ui.login.LoginScreen
 import by.vpolkhovsky.chatx.ui.theme.ChatXTheme
 
 class MainActivity : ComponentActivity() {
+    companion object {
+        lateinit var instance: MainActivity
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
+
         enableEdgeToEdge()
         super.onCreate(savedInstanceState)
+
+        instance = this
+
         setContent {
             ChatXTheme {
                 Surface(

@@ -30,4 +30,3 @@ dependencyResolutionManagement {
 include(":app")
 
 rootProject.name = "ChatX"
-rootProject.name = "http://192.168.0.110:8080"
